@@ -35,7 +35,7 @@
    <string notr="true">background: #eaeaea;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="criar_login">
+   <widget class="QPushButton" name="b_sair">
     <property name="geometry">
      <rect>
       <x>190</x>
@@ -67,7 +67,7 @@ QPushButton:hover {
 }</string>
     </property>
     <property name="text">
-     <string>Criar login</string>
+     <string>Sair</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="input_usuario">
@@ -181,7 +181,7 @@ color: rgb(255, 85, 85);</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="fazer_login">
+   <widget class="QPushButton" name="b_fazer_login">
     <property name="geometry">
      <rect>
       <x>180</x>

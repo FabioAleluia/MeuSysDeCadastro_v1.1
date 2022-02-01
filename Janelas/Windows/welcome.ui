@@ -40,14 +40,14 @@
      <rect>
       <x>180</x>
       <y>190</y>
-      <width>101</width>
+      <width>111</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Arial</family>
-      <pointsize>14</pointsize>
+      <pointsize>13</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
@@ -55,7 +55,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	font: 14pt &quot;Arial&quot;;
+	font: 13pt &quot;Arial&quot;;
 	border-radius: 9px;
 	color: #0f132e;
 	background-color:#FF6924;
@@ -75,14 +75,14 @@ QPushButton:hover {
      <rect>
       <x>180</x>
       <y>120</y>
-      <width>101</width>
+      <width>111</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Arial</family>
-      <pointsize>14</pointsize>
+      <pointsize>13</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
@@ -90,7 +90,7 @@ QPushButton:hover {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	font: 14pt &quot;Arial&quot;;
+	font: 13pt &quot;Arial&quot;;
 	border-radius: 11px;
 	color: #0f132e;
 	background-color:#FF6924;
@@ -102,7 +102,7 @@ QPushButton:hover {
 }</string>
     </property>
     <property name="text">
-     <string>Login</string>
+     <string>Fazer Login</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_superior">

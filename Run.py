@@ -7,10 +7,13 @@ def FazerLogin():
 
 
 
+
+
 app=QtWidgets.QApplication([])
 
 # Janelas
 win = Janelas.GetJanelas()
+
 welcome = win.welcome
 tela_login = win.win_login
 tela_opcoes = win.win_opcoes
