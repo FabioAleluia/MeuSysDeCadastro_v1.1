@@ -41,7 +41,7 @@
     <property name="font">
      <font>
       <family>Arial</family>
-      <pointsize>14</pointsize>
+      <pointsize>11</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
@@ -49,7 +49,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	font: 14pt &quot;Arial&quot;;
+	font: 11pt &quot;Arial&quot;;
 	border-radius: 8px;
 	color: #0f132e;
 	background-color: #FF6924;
@@ -291,69 +291,6 @@ QPushButton:hover {
     <property name="text">
      <string/>
     </property>
-   </widget>
-   <widget class="QFrame" name="frame_1">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>200</y>
-      <width>151</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="toolTipDuration">
-     <number>-1</number>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background: #eaeaea;
-border-radius: 11px;</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QLabel" name="aviso_login_criado">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>10</y>
-       <width>111</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 14pt &quot;Arial&quot;;
-color: #ffffff;
-background-color: #00b554;
-border-radius: 10px;</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::Box</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Sunken</enum>
-     </property>
-     <property name="lineWidth">
-      <number>5</number>
-     </property>
-     <property name="text">
-      <string>Login criado</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">

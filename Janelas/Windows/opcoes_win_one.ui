@@ -23,42 +23,7 @@
    <string notr="true">background: #eaeaea;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="new_cadastros">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>60</y>
-      <width>141</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>14</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
-	font: 14pt &quot;Arial&quot;;
-	border-radius: 11px;
-	color: #0f132e;
-	background-color:#96c3a6;
-}
-
-QPushButton:hover {
-   
-	background-color: #536d88;
-}</string>
-    </property>
-    <property name="text">
-     <string>Novo Cadastro</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="volta_for_opcoes_2">
+   <widget class="QPushButton" name="logoff">
     <property name="geometry">
      <rect>
       <x>270</x>
@@ -96,16 +61,16 @@ QPushButton:hover {
    <widget class="QPushButton" name="conulta_dados">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>130</y>
-      <width>141</width>
+      <x>200</x>
+      <y>170</y>
+      <width>191</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Arial</family>
-      <pointsize>14</pointsize>
+      <pointsize>12</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
@@ -113,7 +78,7 @@ QPushButton:hover {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	font: 14pt &quot;Arial&quot;;
+	font: 12pt &quot;Arial&quot;;
 	border-radius: 11px;
 	color: #0f132e;
 	background-color:#96c3a6;
@@ -128,9 +93,84 @@ QPushButton:hover {
      <string>Consulta Dados</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="p_fisica">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>50</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 11px;
+	color: #0f132e;
+	background-color:#96c3a6;
+}
+
+QPushButton:hover {
+   
+	background-color: #536d88;
+}</string>
+    </property>
+    <property name="text">
+     <string>Cadastra Pessoa Fisica</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="p_juridica">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>110</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	font: 12pt &quot;Arial&quot;;
+	border-radius: 11px;
+	color: #0f132e;
+	background-color:#96c3a6;
+}
+
+QPushButton:hover {
+   
+	background-color: #536d88;
+}</string>
+    </property>
+    <property name="text">
+     <string>Cadastra Pessoa Jurídica</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <tabstops>
+  <tabstop>p_fisica</tabstop>
+  <tabstop>conulta_dados</tabstop>
+  <tabstop>logoff</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

@@ -181,7 +181,7 @@ color: rgb(255, 85, 85);</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="fazer_login">
+   <widget class="QPushButton" name="login">
     <property name="geometry">
      <rect>
       <x>180</x>
