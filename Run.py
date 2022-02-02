@@ -1,6 +1,7 @@
 from PyQt5 import uic,QtWidgets
 from Janelas import Janelas
 from Validacao import ValidarLogin
+from Validacao import ValidarPfisica
 
 
 def InputLogin():
@@ -17,8 +18,23 @@ def InputLogin():
     
     else:
         tela_login.aviso_login.setText("Usuário ou senha incorreto.")
-        
 
+def CadastroPfisica():
+    print('ok')
+    input_cpf = formulario_Pfisica.input_cpf.text()
+    input_nome = formulario_Pfisica.input_nome.text()
+    input_cep = formulario_Pfisica.input_cep.text()
+    input_uf = formulario_Pfisica.input_uf.text()
+    input_cidade = formulario_Pfisica.input_cidade.text()
+    input_numero = formulario_Pfisica.input_numero.text()
+    input_endereco = formulario_Pfisica.input_endereco.text()
+    input_telefoneum = formulario_Pfisica.input_TelefoneUm.text()
+    input_telefonedois = formulario_Pfisica.input_TelefoneDois.text()
+    input_email = formulario_Pfisica.input_email.text()
+    
+    send_db = ValidarPfisica.DadosPfisica(cpf=input_cpf, nome=input_nome, endereco=input_endereco, numero=input_numero, cep=input_cep, uf=input_uf, cidade=input_cidade, telefonefixo=input_telefoneum, telefonecelular=input_telefonedois, email=input_email)
+
+    
 def FazerLogin(): # Sai da Tela de "Bem-Vindo" e vai para a Tela de "Login"
     tela_login.aviso_login.clear()
     tela_login.usuario.clear()
@@ -64,9 +80,8 @@ def VoltaParaOpcoes_2():
     formulario_Pfisica.close()
     tela_opcoes.show()
 
-class Catalago:
-    def Teste():
-        print('OI')
+def Teste():
+    print('Teste de Click')
 
 app=QtWidgets.QApplication([])
 
@@ -91,6 +106,7 @@ tela_opcoes.p_juridica.clicked.connect(CadastroJuridico)
 tela_opcoes.p_fisica.clicked.connect(CadastroFisico)
 formulario_Pjuridica.volta.clicked.connect(VoltaParaOpcoes_1)
 formulario_Pfisica.volta.clicked.connect(VoltaParaOpcoes_2)
+formulario_Pfisica.salva_dados.clicked.connect(CadastroPfisica)
 
 tela_login.senha.setEchoMode(QtWidgets.QLineEdit.Password)
 criar_login.senha.setEchoMode(QtWidgets.QLineEdit.Password)
@@ -102,5 +118,6 @@ tela_login.setFixedSize(461,426)
 criar_login.setFixedSize(461,426)
 tela_opcoes.setFixedSize(601,500)
 
-welcome.show()
+formulario_Pfisica.show()
+#welcome.show()
 app.exec()

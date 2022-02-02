@@ -39,7 +39,7 @@ class NovoUser:
         cursor = conexao_db.cursor()
         d = '12:00'
 
-        cursor.execute("INSERT INTO validalogin VALUES ('"+self.usuario+"', '"+self.senha+"')")
+        cursor.execute("INSERT INTO userpass VALUES ('"+self.usuario+"', '"+self.senha+"')")
 
         conexao_db.commit()
         conexao_db.close()

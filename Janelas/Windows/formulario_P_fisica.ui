@@ -83,7 +83,7 @@ QPushButton:hover {
      <string>Volta</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="salva_infos">
+   <widget class="QPushButton" name="salva_dados">
     <property name="geometry">
      <rect>
       <x>290</x>
@@ -172,7 +172,7 @@ QPushButton:hover {
      <string>Nome</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="a_input_cpf">
+   <widget class="QLineEdit" name="input_cpf">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -231,7 +231,7 @@ QLineEdit:focus {
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="a_input_nome">
+   <widget class="QLineEdit" name="input_nome">
     <property name="geometry">
      <rect>
       <x>200</x>
@@ -294,7 +294,7 @@ QLineEdit:focus {
      <string>Endereço</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="a_input_cep">
+   <widget class="QLineEdit" name="input_cep">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -546,7 +546,7 @@ QLineEdit:focus {
      <string>CEP</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="input_TelefoneFixo">
+   <widget class="QLineEdit" name="input_TelefoneUm">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -593,7 +593,7 @@ QLineEdit:focus {
      <string/>
     </property>
    </widget>
-   <widget class="QLineEdit" name="input_TelefoneCelular">
+   <widget class="QLineEdit" name="input_TelefoneDois">
     <property name="geometry">
      <rect>
       <x>200</x>

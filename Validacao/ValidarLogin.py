@@ -14,7 +14,7 @@ class ValidiLogin:
         conexao = sqlite3.connect(dir_db)
         cursor = conexao.cursor()
         
-        cursor.execute("SELECT senha FROM validalogin")
+        cursor.execute("SELECT senha FROM userpass")
         self.result_tabela = str(cursor.fetchall())
         
         if hash_criado in self.result_tabela:
