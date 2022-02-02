@@ -70,7 +70,7 @@ QPushButton:hover {
      <string>Volta</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="user">
+   <widget class="QLineEdit" name="usuario">
     <property name="geometry">
      <rect>
       <x>90</x>

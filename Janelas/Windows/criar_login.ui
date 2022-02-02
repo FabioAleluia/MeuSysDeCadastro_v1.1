@@ -108,7 +108,7 @@ QLineEdit:focus {
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLineEdit" name="new_pwd">
+   <widget class="QLineEdit" name="senha">
     <property name="geometry">
      <rect>
       <x>90</x>

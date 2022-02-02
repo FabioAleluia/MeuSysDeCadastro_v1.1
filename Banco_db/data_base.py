@@ -14,7 +14,7 @@ class WriteDb:
         self.email = email
     
         # Local onde esta o arquivo do Banco de Dados.
-        dir_db = "/mnt/Fabio_DB/Estudos/Python/Projetos/Software_de_Cadastro/cadastros_v.1.0_gui/Banco_db/Banco_dd.db"
+        dir_db = "/mnt/Fabio_DB/Estudos/Python/Projetos/Software_de_Cadastro/cadastros_v.1.1_qt/Banco_db/Banco_dd.db"
     
         conexao_db = sqlite3.connect(dir_db) # Realizar conexão do arquivo do Banco de Dados
         cursor = conexao_db.cursor()
@@ -33,7 +33,7 @@ class NovoUser:
         self.senha = senha
       
         # Local onde esta o arquivo do Banco de Dados.
-        dir_db = "/mnt/Fabio_DB/Estudos/Python/Projetos/Software_de_Cadastro/cadastros_v.1.0_gui/Banco_db/Banco_dd.db"
+        dir_db = "/mnt/Fabio_DB/Estudos/Python/Projetos/Software_de_Cadastro/cadastros_v.1.1_qt/Banco_db/Banco_dd.db"
 
         conexao_db = sqlite3.connect(dir_db) # Realizar conexão do arquivo do Banco de Dados
         cursor = conexao_db.cursor()
