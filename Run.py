@@ -1,8 +1,26 @@
 from PyQt5 import uic,QtWidgets
 from Janelas import Janelas
+from Validacao import ValidarLogin
+#from Validacao import Gateway
 
 
-def FazerLogin():
+def InputLogin():
+    
+    inputuser = tela_login.user.text()
+        
+    if not inputuser:
+        #print('Sem Usuário')
+        return InputLogin()
+    
+    else:
+        inputsenha = tela_login.senha.text()
+        sendvalidlogin = ValidarLogin.ValidiLogin(usuario=inputuser, senha=inputsenha)
+        
+        t = ValidarLogin.ValidiLogin()
+        print(t.allon)
+
+
+def FazerLogin(): # Sai da Tela de "Bem-Vindo" e vai para a Tela de "Login"
     welcome.close()
     tela_login.show()
 
@@ -14,11 +32,11 @@ def CriarLogin(): # Sai da Tela "Bem-Vindo" e vai pra tela de "Criar Login"
     welcome.close()
     criar_login.show()
 
-def clforwelcome(): # Volta da Tela "Criar Login" para tela de Bem-Vindo
+def clforwelcome(): # Sai da Tela de "Criar Login" e volta pra tela de "Bem-Vindo"
     criar_login.close()
     welcome.show()
 
-def LoginOpcoes():
+def MenuOpcoes():
     tela_login.close()
     tela_opcoes.show()
 
@@ -29,7 +47,6 @@ def OpcoesForLogin():
 def CadastroFisico():
     tela_opcoes.close()
     formulario_Pfisica.show()
-
 
 def CadastroJuridico():
     tela_opcoes.close()
@@ -42,6 +59,10 @@ def VoltaParaOpcoes_1():
 def VoltaParaOpcoes_2():
     formulario_Pfisica.close()
     tela_opcoes.show()
+
+class Catalago:
+    def Teste():
+        print('OI')
 
 app=QtWidgets.QApplication([])
 
@@ -58,8 +79,8 @@ formulario_Pjuridica = win.win_formulario_Pjuridica
 # Ações dos Botões
 welcome.fazer_login.clicked.connect(FazerLogin)
 welcome.criar_login.clicked.connect(CriarLogin)
+tela_login.login.clicked.connect(InputLogin)
 tela_login.volta.clicked.connect(VoltaWelcome)
-tela_login.login.clicked.connect(LoginOpcoes)
 criar_login.volta.clicked.connect(clforwelcome)
 tela_opcoes.logoff.clicked.connect(OpcoesForLogin)
 tela_opcoes.p_juridica.clicked.connect(CadastroJuridico)

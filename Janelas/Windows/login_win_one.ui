@@ -70,7 +70,7 @@ QPushButton:hover {
      <string>Volta</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="input_usuario">
+   <widget class="QLineEdit" name="user">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -114,7 +114,7 @@ QLineEdit:focus {
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLineEdit" name="input_senha">
+   <widget class="QLineEdit" name="senha">
     <property name="geometry">
      <rect>
       <x>90</x>
