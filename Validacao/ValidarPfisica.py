@@ -15,6 +15,7 @@ class DadosPfisica:
         self.telefonecelular = telefonecelular
         self.email = email
         
+        # Validação do (CPF)
         valida_cpf = self.cpf.strip()
         valida_cpf = valida_cpf.replace(" ","")
         
@@ -36,4 +37,25 @@ class DadosPfisica:
                 
         else:
             self.cpf_invalido = 0
+        
+        # Validação do (Nome)
+        valida_nome = self.nome.strip()
+        valida_nome = valida_nome.replace(" ","")
+        
+        if valida_nome.isalpha():
+            valida_nome = len(valida_nome)
+            valida_nome = int(valida_nome)
+            
+            if valida_nome < 5 or valida_nome > 45:
+                self.nome_valido = 0
+            
+            if valida_nome >= 5 or valida_nome <= 45:
+                self.input_nome = str(self.nome.strip())
+                self.nome_valido = 1
+                
+            else:
+                self.nome_valido = 0
+        
+        else:
+            self.nome_valido = 0
         

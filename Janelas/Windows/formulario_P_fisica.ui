@@ -212,6 +212,9 @@ QLineEdit:focus {
     <property name="text">
      <string/>
     </property>
+    <property name="maxLength">
+     <number>11</number>
+    </property>
     <property name="echoMode">
      <enum>QLineEdit::Normal</enum>
     </property>

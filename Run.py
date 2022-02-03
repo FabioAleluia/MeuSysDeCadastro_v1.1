@@ -1,3 +1,4 @@
+from signal import pause
 from PyQt5 import uic,QtWidgets
 from Janelas import Janelas
 from Validacao import ValidarLogin
@@ -32,21 +33,35 @@ def CadastroPfisica():
     input_telefonedois = formulario_Pfisica.input_TelefoneDois.text()
     input_email = formulario_Pfisica.input_email.text()
     
+    # Enviar os dados recebido do formulario, para serem validados
     send_db = ValidarPfisica.DadosPfisica(cpf=input_cpf, nome=input_nome, endereco=input_endereco, numero=input_numero, cep=input_cep, uf=input_uf, cidade=input_cidade, telefonefixo=input_telefoneum, telefonecelular=input_telefonedois, email=input_email)
     
+    #---- Retorno da Validação (CPF) ----#
     cpf = send_db.cpf_invalido
     
     if cpf == 0:
         formulario_Pfisica.aviso_01.setText("*")
         print('CPF Invalido')
         return CadastroFisico()
-    
+        
     else:
-        pass
         formulario_Pfisica.aviso_01.setText("")
         print('CPF Valido')
     
-    send_db = WriteDb.Pfisica(cpf=input_cpf, nome='input_nome', endereco='input_endereco', numero='input_numero', cep='input_cep', uf='input_uf', cidade='input_cidade', telefonefixo='input_TelefoneFixo', telefonecelular='input_TelefoneCelular', email='input_email')
+    #---- Retorno da Validação (Nome) ----#
+    nome = send_db.nome_valido
+    
+    if nome == 0:
+        formulario_Pfisica.aviso_02.setText("*")
+        print('Nome INVALIDO')
+        return CadastroFisico()
+    
+    else:
+        pass
+        formulario_Pfisica.aviso_02.setText("")
+        print('Nome VALIDO')
+    
+    send_db = WriteDb.Pfisica(cpf=input_cpf, nome=send_db.input_nome, endereco='input_endereco', numero='input_numero', cep='input_cep', uf='input_uf', cidade='input_cidade', telefonefixo='input_TelefoneFixo', telefonecelular='input_TelefoneCelular', email='input_email')
 
 def CadastroPjuridica():
     input_cnpj = formulario_Pjuridica.input_cpf.text()
@@ -158,6 +173,6 @@ criar_login.setFixedSize(461,426)
 tela_opcoes.setFixedSize(601,500)
 
 #formulario_Pjuridica.show()
-#formulario_Pfisica.show()
-welcome.show()
+formulario_Pfisica.show()
+#welcome.show()
 app.exec()
