@@ -2,7 +2,8 @@ from PyQt5 import uic,QtWidgets
 from Janelas import Janelas
 from Validacao import ValidarLogin
 from Validacao import ValidarPfisica
-
+from Validacao import ValidarPjuridica
+from Banco_db import WriteDb
 
 def InputLogin():
     tela_login.aviso_login.clear()
@@ -20,7 +21,6 @@ def InputLogin():
         tela_login.aviso_login.setText("Usuário ou senha incorreto.")
 
 def CadastroPfisica():
-    print('ok')
     input_cpf = formulario_Pfisica.input_cpf.text()
     input_nome = formulario_Pfisica.input_nome.text()
     input_cep = formulario_Pfisica.input_cep.text()
@@ -33,7 +33,45 @@ def CadastroPfisica():
     input_email = formulario_Pfisica.input_email.text()
     
     send_db = ValidarPfisica.DadosPfisica(cpf=input_cpf, nome=input_nome, endereco=input_endereco, numero=input_numero, cep=input_cep, uf=input_uf, cidade=input_cidade, telefonefixo=input_telefoneum, telefonecelular=input_telefonedois, email=input_email)
+    
+    cpf = send_db.cpf_invalido
+    
+    if cpf == 0:
+        formulario_Pfisica.aviso_01.setText("*")
+        print('CPF Invalido')
+        return CadastroFisico()
+    
+    else:
+        pass
+        formulario_Pfisica.aviso_01.setText("")
+        print('CPF Valido')
+    
+    send_db = WriteDb.Pfisica(cpf=input_cpf, nome='input_nome', endereco='input_endereco', numero='input_numero', cep='input_cep', uf='input_uf', cidade='input_cidade', telefonefixo='input_TelefoneFixo', telefonecelular='input_TelefoneCelular', email='input_email')
 
+def CadastroPjuridica():
+    input_cnpj = formulario_Pjuridica.input_cpf.text()
+    input_razaosocial = formulario_Pjuridica.input_razaosocial.text()
+    input_cep = formulario_Pjuridica.input_cep.text()
+    input_uf = formulario_Pjuridica.input_uf.text()
+    input_cidade = formulario_Pjuridica.input_cidade.text()
+    input_endereco = formulario_Pjuridica.input_endereco.text()
+    input_numero = formulario_Pjuridica.input_numero.text()
+    input_telefoneum = formulario_Pjuridica.input_TelefoneUm.text()
+    input_telefonedois = formulario_Pjuridica.input_TelefoneDois.text()
+    input_email = formulario_Pjuridica.input_email.text()
+    
+    send_db = ValidarPjuridica.DadosPjuridica(cnpj=input_cnpj, nome=input_razaosocial, endereco=input_endereco, numero=input_numero, cep=input_cep, uf=input_uf, cidade=input_cidade, telefonefixo=input_telefoneum, telefonecelular=input_telefonedois, email=input_email)
+    
+    cnpj = send_db.cnpj_invalido
+    
+    if cnpj == 0:
+        print('CNPJ Invalido')
+    
+    else:
+        pass
+        print('CNPJ Valido')
+    
+    write_db = WriteDb.Pjuridica(cnpj=send_db.cnpj_valido, razaos=input_razaosocial, endereco=input_endereco, numero=input_numero, cep=input_cep, uf=input_uf, cidade=input_cidade, telefonefixo=input_telefoneum, telefonecelular=input_telefonedois, email=input_email)
     
 def FazerLogin(): # Sai da Tela de "Bem-Vindo" e vai para a Tela de "Login"
     tela_login.aviso_login.clear()
@@ -107,6 +145,7 @@ tela_opcoes.p_fisica.clicked.connect(CadastroFisico)
 formulario_Pjuridica.volta.clicked.connect(VoltaParaOpcoes_1)
 formulario_Pfisica.volta.clicked.connect(VoltaParaOpcoes_2)
 formulario_Pfisica.salva_dados.clicked.connect(CadastroPfisica)
+formulario_Pjuridica.salva_dados.clicked.connect(CadastroPjuridica)
 
 tela_login.senha.setEchoMode(QtWidgets.QLineEdit.Password)
 criar_login.senha.setEchoMode(QtWidgets.QLineEdit.Password)
@@ -118,6 +157,7 @@ tela_login.setFixedSize(461,426)
 criar_login.setFixedSize(461,426)
 tela_opcoes.setFixedSize(601,500)
 
-formulario_Pfisica.show()
-#welcome.show()
+#formulario_Pjuridica.show()
+#formulario_Pfisica.show()
+welcome.show()
 app.exec()

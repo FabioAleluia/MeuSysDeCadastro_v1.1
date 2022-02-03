@@ -546,69 +546,6 @@ QLineEdit:focus {
      <string>CEP</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="input_numero">
-    <property name="geometry">
-     <rect>
-      <x>500</x>
-      <y>220</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLineEdit {
-    background: #dbdcff;
-    border: 2px solid #00557f;
-    border-radius: 5px;
-    color:#242424;
-    font-family:Arial;
-}
-
-QLineEdit:focus {
-    border: 2px solid #00557f;
-}</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="cursorPosition">
-     <number>0</number>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_10">
-    <property name="geometry">
-     <rect>
-      <x>500</x>
-      <y>190</y>
-      <width>91</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Numero</string>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="input_TelefoneUm">
     <property name="geometry">
      <rect>
@@ -998,6 +935,69 @@ color: rgb(255, 85, 85);</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="input_numero">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>220</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background: #dbdcff;
+    border: 2px solid #00557f;
+    border-radius: 5px;
+    color:#242424;
+    font-family:Arial;
+}
+
+QLineEdit:focus {
+    border: 2px solid #00557f;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="cursorPosition">
+     <number>0</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>190</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Numero</string>
     </property>
    </widget>
    <widget class="QLabel" name="aviso_07">

@@ -45,7 +45,7 @@
      </font>
     </property>
     <property name="text">
-     <string>CPF</string>
+     <string>CNPJ</string>
     </property>
    </widget>
    <widget class="QPushButton" name="volta">
@@ -158,7 +158,7 @@ QPushButton:hover {
      <rect>
       <x>200</x>
       <y>40</y>
-      <width>61</width>
+      <width>111</width>
       <height>21</height>
      </rect>
     </property>
@@ -169,7 +169,7 @@ QPushButton:hover {
      </font>
     </property>
     <property name="text">
-     <string>Nome</string>
+     <string>Razão Social</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="input_cpf">
@@ -231,7 +231,7 @@ QLineEdit:focus {
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="input_nome">
+   <widget class="QLineEdit" name="input_razaosocial">
     <property name="geometry">
      <rect>
       <x>200</x>
@@ -546,70 +546,7 @@ QLineEdit:focus {
      <string>CEP</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="input_numero">
-    <property name="geometry">
-     <rect>
-      <x>500</x>
-      <y>220</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLineEdit {
-    background: #dbdcff;
-    border: 2px solid #00557f;
-    border-radius: 5px;
-    color:#242424;
-    font-family:Arial;
-}
-
-QLineEdit:focus {
-    border: 2px solid #00557f;
-}</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="cursorPosition">
-     <number>0</number>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_10">
-    <property name="geometry">
-     <rect>
-      <x>500</x>
-      <y>190</y>
-      <width>91</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Numero</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="input_TelefoneUm">
+   <widget class="QLineEdit" name="input_TelefoneFixo">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -656,7 +593,7 @@ QLineEdit:focus {
      <string/>
     </property>
    </widget>
-   <widget class="QLineEdit" name="input_TelefoneDois">
+   <widget class="QLineEdit" name="input_TelefoneCelular">
     <property name="geometry">
      <rect>
       <x>200</x>
