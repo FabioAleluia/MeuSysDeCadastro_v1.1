@@ -22,6 +22,7 @@ if con.is_connected():
     
     #con.commit()
 
+
 if con.is_connected():
     cursor.close()
     con.close()

@@ -12,18 +12,23 @@ class ValidiLogin:
         hash_criado = hashlib.sha256(join_us.encode('utf-8')).hexdigest()
         
         con = mysql.connector.connect(host='192.168.0.104',database='Banco_dd',user='admin',password='1992')
-        cursor = con.cursor()
         
-        cursor.execute("select database();")
-        cursor.execute("SELECT senha FROM UserPass")
+        if con.is_connected():
+            cursor = con.cursor()
+            
+            #cursor.execute("select database();")
+            cursor.execute("SELECT senha FROM UserPass")
 
-        result_tabela = str(cursor.fetchone())
+            self.result_tabela = str(cursor.fetchone())
+            
+            if hash_criado in self.result_tabela:
+                self.liberado = int(1)
+
+            else:
+                self.liberado = 0
         
-        if hash_criado in self.result_tabela:
-            self.liberado = int(1)
-
         else:
-            self.liberado = 0
+            print('Falha ao tenta se conectar ao Banco de Dados')
 
 '''
 class ValidiLogin:
