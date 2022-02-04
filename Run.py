@@ -1,4 +1,3 @@
-from signal import pause
 from PyQt5 import uic,QtWidgets
 from Janelas import Janelas
 from Validacao import ValidarLogin
