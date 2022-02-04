@@ -172,7 +172,5 @@ tela_login.setFixedSize(461,426)
 criar_login.setFixedSize(461,426)
 tela_opcoes.setFixedSize(601,500)
 
-#formulario_Pjuridica.show()
-formulario_Pfisica.show()
-#welcome.show()
+welcome.show()
 app.exec()
