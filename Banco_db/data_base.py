@@ -1,4 +1,5 @@
 import sqlite3
+import mysql.connector
 
 class WriteDb:
     def __init__(self, cpf, nome, endereco, numero, cep, uf, cidade, telefonefixo, telefonecelular, email):
@@ -43,3 +44,8 @@ class NovoUser:
 
         conexao_db.commit()
         conexao_db.close()
+
+
+        
+        
+        
