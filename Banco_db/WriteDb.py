@@ -4,14 +4,14 @@ import time
 
 
 class Pfisica:
-    def __init__(self, cpf, nome, endereco, numero, cep, uf, cidade, telefonefixo, telefonecelular, email):
+    def __init__(self, cpf, nome, cep, uf, cidade, endereco, numero, telefonefixo, telefonecelular, email):
         self.cpf = cpf
         self.nome = nome
-        self.endereco = endereco
-        self.numero = numero
         self.cep = cep
         self.uf = uf
         self.cidade = cidade
+        self.endereco = endereco
+        self.numero = numero
         self.telefonefixo = telefonefixo
         self.telefonecelular = telefonecelular
         self.email = email
@@ -25,7 +25,7 @@ class Pfisica:
         conexao_db = sqlite3.connect(dir_db) # Realizar conexão do arquivo do Banco de Dados
         cursor = conexao_db.cursor()
 
-        cursor.execute("INSERT INTO pessoafisica VALUES ('"+self.cpf+"', '"+self.nome+"', '"+self.endereco+"', '"+self.numero+"', '"+self.cep+"', '"+self.uf+"', '"+self.cidade+"', '"+self.telefonefixo+"', '"+self.telefonecelular+"', '"+self.email+"', '"+dta+"', '"+hra+"')")
+        cursor.execute("INSERT INTO pessoafisica VALUES ('"+self.cpf+"', '"+self.nome+"', '"+self.cep+"', '"+self.uf+"', '"+self.cidade+"', '"+self.endereco+"', '"+self.numero+"', '"+self.telefonefixo+"', '"+self.telefonecelular+"', '"+self.email+"', '"+dta+"', '"+hra+"')")
 
         conexao_db.commit()
         conexao_db.close()
